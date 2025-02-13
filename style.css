@@ -1,44 +1,45 @@
 body {
     margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: white;
     overflow: hidden;
-    background: url('sunset-pixel.jpg') no-repeat center center fixed;
-    background-size: cover;
-    text-align: center;
+    transition: background 0.5s ease-in-out;
 }
 
 .heart-container {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#heart {
-    background: transparent;
-    width: 80px;
+    width: 150px;
+    height: 150px;
     cursor: pointer;
-    transition: transform 0.3s;
+    animation: pulse 1s infinite alternate;
 }
 
-#heart:hover {
-    transform: scale(1.1);
+.heart-container img {
+    width: 100%;
 }
 
-#wish-text {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 24px;
-    color: #ff007f;
-    text-shadow: 0 0 10px #ff007f;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    animation: flicker 1.5s infinite alternate;
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
 }
 
-.hidden {
+.message-container {
     display: none;
+    position: absolute;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Press Start 2P', cursive;
+    color: #ff66c4;
+    text-shadow: 2px 2px 4px rgba(255, 102, 196, 0.8);
+}
+
+.retro-background {
+    background: url('sunset-pixel.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 @keyframes flicker {
