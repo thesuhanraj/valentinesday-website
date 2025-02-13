@@ -1,5 +1,5 @@
 function showWish() {
-    document.getElementById("heart").src = "pink-heart.png";
+    document.getElementById("heart").src = "pink-heart2.png";
     let wishText = document.getElementById("wish-text");
     wishText.classList.remove("hidden");
     
