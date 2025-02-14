@@ -1,19 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
     text-align: center;
-    background-color: #ffebee;
-    font-family: Arial, sans-serif;
+    background-color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    transition: background 1s ease-in-out;
 }
 
 #heart {
     width: 150px;
     cursor: pointer;
     margin-top: 50px;
+    animation: pulse 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
 }
 
 #message {
-    color: #d50000;
+    display: none;
+    color: #ff007f;
     font-size: 24px;
     font-weight: bold;
     margin-top: 20px;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
 }
 
+.neon-bg {
+    background: url('sunset-pixel.jpg') no-repeat center center/cover;
+}
+
+.reveal-text {
+    display: block !important;
+    animation: glitch 0.7s infinite alternate ease-in-out;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 2px 0px #ff0000, -2px -2px 0px #00ff00;
+    }
+    100% {
+        text-shadow: -2px -2px 0px #ff0000, 2px 2px 0px #00ff00;
+    }
+}
