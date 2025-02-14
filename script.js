@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
     messageBox.style.position = "fixed";
     messageBox.style.bottom = "20px";
     messageBox.style.left = "20px";
+    messageBox.style.transform = "translate(0, 0)";
 
     document.body.style.overflow = "hidden";
     document.documentElement.style.overflow = "hidden";
 });
-
