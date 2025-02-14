@@ -5,31 +5,13 @@ body {
     background-color: #fff;
     font-family: 'Press Start 2P', cursive;
     transition: background 1s ease-in-out;
-    overflow: hidden;
 }
 
-.heart-container {
-    position: relative;
-    display: inline-block;
-}
-
-.heart {
+#heart {
     width: 150px;
     cursor: pointer;
     margin-top: 50px;
     animation: pulse 1.5s infinite alternate ease-in-out;
-    position: absolute;
-    transition: transform 1s ease-in-out;
-}
-
-.heart.left {
-    transform: translateX(-100px) rotate(-15deg);
-    opacity: 0;
-}
-
-.heart.right {
-    transform: translateX(100px) rotate(15deg);
-    opacity: 0;
 }
 
 @keyframes pulse {
@@ -43,6 +25,23 @@ body {
     }
 }
 
+.split-heart {
+    animation: split 1s ease-out forwards;
+}
+
+@keyframes split {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: translateX(-50px) rotate(-20deg), translateX(50px) rotate(20deg);
+        opacity: 0;
+    }
+}
+
 #message {
     display: none;
     color: #ff007f;
@@ -50,8 +49,7 @@ body {
     font-weight: bold;
     margin-top: 20px;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    text-align: center;
 }
 
 .neon-bg {
@@ -60,7 +58,6 @@ body {
 
 .reveal-text {
     display: block !important;
-    opacity: 1;
     animation: glitch 0.7s infinite alternate ease-in-out;
 }
 
