@@ -1,17 +1,13 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const heart = document.getElementById("heart");
-    const message = document.getElementById("message");
-    const body = document.body;
+document.getElementById('heart').addEventListener('click', function() {
+    this.classList.add('separate-heart');
 
-    heart.addEventListener("click", function () {
-        // Add split animation class
-        heart.classList.add("split-heart");
-
-        // Wait for the split animation to finish
-        setTimeout(() => {
-            heart.style.display = "none"; // Hide the heart
-            body.classList.add("neon-bg"); // Change background
-            message.classList.add("reveal-text"); // Show message
-        }, 1000); // Adjust timing to match CSS animation duration
-    });
+    setTimeout(() => {
+        document.body.classList.add('neon-bg');
+        document.getElementById('message').classList.add('reveal-text');
+        document.getElementById('love-letter').style.display = 'block';
+    }, 1000);
 });
+
+function closeLetter() {
+    document.getElementById('love-letter').style.display = 'none';
+}
