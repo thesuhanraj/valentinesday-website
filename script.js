@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     messageBox.style.position = "fixed";
-    messageBox.style.bottom = "5px";
+    messageBox.style.bottom = "0px";
     messageBox.style.left = "10px";
     messageBox.style.transform = "translate(0, 0)";
     messageBox.style.zIndex = "999";
