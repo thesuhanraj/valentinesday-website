@@ -7,8 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img id="heart" src="pink-heart2.png" alt="Heart">
-    <h1 id="message" style="display: none;">HAPPY VALENTINE'S DAY!</h1>
+    <div id="container">
+        <img id="heart" src="pink-heart2.png" alt="Heart">
+        <h1 id="message">HAPPY VALENTINE'S DAY!</h1>
+
+        <div id="love-letter">
+            <div class="title-bar">
+                <span>Love Letter - Notepad</span>
+                <button onclick="closeLetter()">X</button>
+            </div>
+            <div class="content">
+                <p>Dear Love,</p>
+                <p>On this special day, I just want to say that you mean the world to me...</p>
+                <p>Forever yours,</p>
+                <p><strong>Your Secret Admirer ❤️</strong></p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
