@@ -11,3 +11,4 @@ document.getElementById('heart').addEventListener('click', function() {
 function closeLetter() {
     document.getElementById('love-letter').style.display = 'none';
 }
+
