@@ -21,3 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         messageBox.style.display = "none";
     });
 
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+});
+
