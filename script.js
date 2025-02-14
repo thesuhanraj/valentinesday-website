@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     messageBox.style.bottom = "20px";
     messageBox.style.left = "20px";
     messageBox.style.transform = "translate(0, 0)";
+    messageBox.style.zIndex = "999";
 
     document.body.style.overflow = "hidden";
     document.documentElement.style.overflow = "hidden";
