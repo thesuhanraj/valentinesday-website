@@ -1,15 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let heart = document.getElementById("heart");
-    let body = document.body;
-    let message = document.getElementById("message");
+    const heart = document.getElementById("heart");
+    const message = document.getElementById("message");
+    const body = document.body;
 
     heart.addEventListener("click", function () {
-        heart.style.animation = "glitch 0.3s ease-in-out";
+        // Add split animation class
+        heart.classList.add("split-heart");
+
+        // Wait for the split animation to finish
         setTimeout(() => {
-            heart.style.display = "none";
-            body.style.backgroundImage = "url('sunset-pixel.jpg')";
-            body.style.backgroundSize = "cover";
-            message.style.display = "block";
-        }, 300);
+            heart.style.display = "none"; // Hide the heart
+            body.classList.add("neon-bg"); // Change background
+            message.classList.add("reveal-text"); // Show message
+        }, 1000); // Adjust timing to match CSS animation duration
     });
 });
