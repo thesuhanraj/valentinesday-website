@@ -30,9 +30,8 @@ body {
     color: #ff007f;
     font-size: 50px;
     font-weight: bold;
-    margin-top: 20px;
+    margin: 30px auto;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
-    text-align: center;
 }
 
 .neon-bg {
@@ -53,57 +52,49 @@ body {
     }
 }
 
-#letter {
-    position: absolute;
+/* Heart Separation Effect */
+.separate-heart {
+    animation: separate 1s forwards ease-out;
+}
+
+@keyframes separate {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5) translateX(-50px);
+    }
+}
+
+#love-letter {
+    display: none;
+    width: 350px;
+    background: #fff;
+    border: 3px solid #000;
+    padding: 10px;
+    position: fixed;
     top: 20px;
     left: 20px;
-    width: 200px;
-    height: 150px;
-    background: #c0c0c0;
-    border: 2px solid #000;
-    padding: 10px;
-    font-family: 'MS Sans Serif', sans-serif;
-    font-size: 14px;
-    color: #000;
-    display: none;
+    box-shadow: 4px 4px 0px #000;
+    font-family: 'Courier New', monospace;
 }
 
-#letter-header {
-    background: #000080;
-    color: white;
+.title-bar {
+    background: #0000ff;
+    color: #fff;
     padding: 5px;
-    text-align: left;
-    font-weight: bold;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 
-#letter-close {
-    position: absolute;
-    top: 3px;
-    right: 5px;
-    cursor: pointer;
+.title-bar button {
+    background: red;
     color: white;
+    border: none;
+    cursor: pointer;
 }
 
-#letter-text {
-    margin-top: 10px;
-    text-align: left;
-}
-
-@keyframes typewriter {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-.letter-reveal {
-    display: block !important;
-    animation: typewriter 2s steps(40) 1 forwards;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid black;
+.content {
+    padding: 10px;
 }
 
